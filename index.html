@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Motor Vehicle Accident Law Request Form</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <div class="container">
+        <!-- Progress Bar -->
+        <div class="progress-bar">
+            <div id="progress" class="progress"></div>
+        </div>
+
+        <h1>Motor Vehicle Accident Law Request Form</h1>
+        <form id="accidentForm">
+            <!-- Step 1: Contact Information -->
+            <div class="form-section" id="contactInfoSection">
+                <h2>Step 1: Contact Information</h2>
+                <label for="name">Name:</label>
+                <input type="text" id="name" placeholder="Enter Your Name" required>
+
+                <label for="phone">Phone:</label>
+                <input type="text" id="phone" placeholder="Enter Your Phone Number" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" placeholder="Enter Your Email Address" required>
+
+                <label for="contactMethod">Preferred Contact Method:</label>
+                <select id="contactMethod" required>
+                    <option value="Phone">Phone</option>
+                    <option value="Email">Email</option>
+                    <option value="Text Message">Text Message</option>
+                </select>
+
+                <button type="button" class="next-btn" onclick="nextSection('accidentDetailsSection')">Next</button>
+            </div>
+
+            <!-- Step 2: Accident Details -->
+            <div class="form-section" id="accidentDetailsSection">
+                <h2>Step 2: Accident Details</h2>
+                <label for="accidentDate">Date of Accident:</label>
+                <input type="date" id="accidentDate" required>
+
+                <label for="accidentType">Type of Accident:</label>
+                <select id="accidentType" required>
+                    <option value="Rear-End Collision">Rear-End Collision</option>
+                    <option value="T-Bone Collision">T-Bone Collision</option>
+                    <option value="Head-On Collision">Head-On Collision</option>
+                    <option value="Multi-Vehicle Accident">Multi-Vehicle Accident</option>
+                    <option value="Pedestrian Involved">Pedestrian Involved</option>
+                    <option value="Other">Other (Specify)</option>
+                </select>
+
+                <label for="injuryStatus">Injury Status:</label>
+                <select id="injuryStatus" required>
+                    <option value="Injured">Injured</option>
+                    <option value="No Injury">No Injury</option>
+                    <option value="Not Sure">Not Sure</option>
+                </select>
+
+                <label for="accidentDescription">Brief Description of the Accident:</label>
+                <textarea id="accidentDescription" placeholder="Enter a Brief Description of the Accident" required></textarea>
+
+                <button type="button" class="next-btn" onclick="nextSection('contributingFactorsSection')">Next</button>
+            </div>
+
+            <!-- Step 3: Contributing Factors -->
+            <div class="form-section" id="contributingFactorsSection">
+                <h2>Step 3: Contributing Factors</h2>
+                <label>What Contributed to the Accident? (Select all that apply):</label>
+                <div>
+                    <input type="checkbox" id="distractedDriving" value="Distracted Driving">
+                    <label for="distractedDriving">Distracted Driving</label>
+                </div>
+                <div>
+                    <input type="checkbox" id="speeding" value="Speeding">
+                    <label for="speeding">Speeding</label>
+                </div>
+                <div>
+                    <input type="checkbox" id="dui" value="DUI">
+                    <label for="dui">DUI (Driving Under the Influence)</label>
+                </div>
+                <div>
+                    <input type="checkbox" id="roadHazards" value="Road Hazards">
+                    <label for="roadHazards">Road Hazards</label>
+                </div>
+                <div>
+                    <input type="checkbox" id="aggressiveDriving" value="Aggressive Driving">
+                    <label for="aggressiveDriving">Aggressive Driving</label>
+                </div>
+                <div>
+                    <input type="checkbox" id="otherContributing" value="Other">
+                    <label for="otherContributing">Something Else (Specify in Notes)</label>
+                </div>
+
+                <label for="policeCalled">Were Police Called to the Scene?</label>
+                <select id="policeCalled" required>
+                    <option value="Yes">Yes</option>
+                    <option value="No">No</option>
+                </select>
+
+                <button type="button" class="next-btn" onclick="nextSection('submitSection')">Next</button>
+            </div>
+
+            <!-- Step 4: Submit Section -->
+            <div class="form-section" id="submitSection">
+                <h2>Submit Your Request</h2>
+                <button type="submit" class="submit-btn">Submit Loan Application</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
